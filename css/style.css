@@ -832,15 +832,26 @@ button.primary {
 
 .form-checkbox {
   margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .policy {
+  display: inline-block;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 
   color: var(--primary-text-color);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .form-icon {
@@ -848,6 +859,30 @@ button.primary {
   height: 18px;
 
   position: absolute;
+  left: 10px;
   top: 50%;
-  left: 12px;
+}
+
+.checkbox-icon {
+  width: 16px;
+  height: 16px;
+
+  position: absolute;
+  left: 3px;
+  top: 5px;
+}
+
+.form-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.policy-link {
+  color: var(--accent);
+  font-family: inherit;
+}
+
+.checkbox:checked + .checkbox-icon {
+  background-color: blue;
 }

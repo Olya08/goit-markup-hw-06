@@ -488,14 +488,18 @@
             </div>
 
             <div class="form-checkbox">
-              <input type="checkbox" name="policy" id="policy" />
-              <label class="policy" for="policy"
-                >Соглашаюсь с рассылкой и принимаю<a>Условия договора</a></label
+              <label class="policy" for="policy">
+                <input class="checkbox" type="checkbox" name="policy" id="policy" />
+                <svg class="checkbox-icon">
+                  <use href="./images/symbol-defs.svg#icon-cube"></use>
+                </svg>
+                Соглашаюсь с рассылкой и принимаю
+                <span><a href="#" class="policy-link">Условия договора</a></span></label
               >
             </div>
-
-            <button class="button primary form-button" type="submit">Отправить</button>
           </form>
+
+          <button class="button primary form-button" type="submit">Отправить</button>
         </div>
       </div>
     </div>
