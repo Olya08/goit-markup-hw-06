@@ -435,6 +435,24 @@
               </li>
             </ul>
           </div>
+
+          <div class="sign-in">
+            <p class="text">Подпишитесь на рассылку</p>
+            <div class="sign-in-box">
+              <form>
+                <input class="footer-email" type="email" name="email" placeholder="Email" />
+              </form>
+
+              <div class="align">
+                <button class="button primary footer-button" type="button">
+                  Подписаться
+                  <svg class="icon-send">
+                    <use href="./images/symbol-defs.svg#icon-send"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
@@ -476,22 +494,21 @@
             </div>
 
             <div class="form-field comment-field">
-              <label class="form-label form-comment" for="comment">Комментарий</label>
-              <textarea
+              <label class="form-label form-comment" for="comment">Комментарий</label
+              ><textarea
                 class="comment"
                 name="comment"
-                rows="5"
                 id="comment"
                 placeholder="Введите текст"
-              >
-              </textarea>
+              ></textarea>
             </div>
 
             <div class="form-checkbox">
               <label class="policy" for="policy">
-                <input class="checkbox" type="checkbox" name="policy" id="policy" />
-                <svg class="checkbox-icon">
-                  <use href="./images/symbol-defs.svg#icon-cube"></use>
+                <input class="checkbox visually-hidden" type="checkbox" name="policy" id="policy" />
+                <span class="checkbox-icon"></span>
+                <svg class="icon-check">
+                  <use href="./images/symbol-defs.svg#icon-check"></use>
                 </svg>
                 Соглашаюсь с рассылкой и принимаю
                 <span><a href="#" class="policy-link">Условия договора</a></span></label
