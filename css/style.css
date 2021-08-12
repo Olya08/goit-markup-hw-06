@@ -532,6 +532,7 @@ button.primary {
 .footer-groups {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
 }
 
 .join-box {
@@ -559,6 +560,10 @@ button.primary {
 .network-link-bottom:hover,
 .network-link-bottom:focus {
   background-color: var(--accent);
+}
+
+.footer-email:focus {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* Стили для portfolio.html */
@@ -696,6 +701,7 @@ button.primary {
   left: 0;
   width: 100%;
   height: 100%;
+
   background-color: rgba(0, 0, 0, 0.2);
 
   transition: transform var(--main-transition), opacity var(--main-transition);
@@ -713,6 +719,7 @@ button.primary {
   left: 50%;
   transform: translate(-50%, -50%);
 
+  padding: 40px;
   min-width: 528px;
   min-height: 581px;
   background-color: var(--primary-white-color);
@@ -724,12 +731,11 @@ button.primary {
 
 .icon-box {
   position: absolute;
-  bottom: 93%;
-  left: 93%;
+  top: 8px;
+  right: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6px;
   width: 30px;
   height: 30px;
   background-color: var(--primary-white-color);
@@ -788,11 +794,8 @@ button.primary {
 
 /* Form Styles */
 
-.sign-in-form {
-  padding: 40px;
-}
-
 .form-title {
+  display: block;
   margin: 0;
   font-weight: bold;
   font-size: 20px;
@@ -810,6 +813,7 @@ button.primary {
 
 .form-field {
   position: relative;
+  margin-bottom: 10px;
 }
 
 .form-input,
@@ -838,10 +842,6 @@ button.primary {
 .comment:focus {
   outline: none;
   border: 1px solid #2196f3;
-}
-
-.form-field + .form-field {
-  margin-top: 10px;
 }
 
 .comment {
@@ -883,24 +883,6 @@ button.primary {
   margin-bottom: 20px;
 }
 
-.form-checkbox {
-  margin-bottom: 30px;
-  text-align: center;
-  position: relative;
-}
-
-.policy {
-  display: inline-block;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-
-  color: var(--primary-text-color);
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .form-icon {
   width: 18px;
   height: 18px;
@@ -910,49 +892,50 @@ button.primary {
   top: 50%;
 }
 
-.checkbox-icon {
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  border: 2px solid black;
-  border-radius: 2px;
-
-  position: absolute;
-  left: 0;
-  top: 5px;
-}
-
 .form-button {
   display: block;
   margin-left: auto;
   margin-right: auto;
+
+  cursor: pointer;
 }
 
+.form-button:hover,
+.form-button:focus {
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
 .policy-link {
   color: var(--accent);
   font-family: inherit;
 }
 
-.icon-check {
-  width: 16px;
-  height: 15px;
-  background-color: var(--accent);
+.policy {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 
-  position: absolute;
-  left: 0;
-  top: 5px;
-  border-radius: 2px;
+  color: var(--primary-text-color);
 
-  opacity: 0;
-
-  transition: background-color var(--main-transition), opacity var(--main-transition);
+  cursor: pointer;
 }
 
-.checkbox:checked ~ .icon-check {
-  opacity: 1;
-  background-color: var(--accent);
+.checkbox-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 15px;
+  border: 2px solid black;
+  border-radius: 2px;
 }
 
 .checkbox:checked + .checkbox-icon {
-  opacity: 0;
+  background-color: var(--accent);
+  border-color: var(--accent);
 }
